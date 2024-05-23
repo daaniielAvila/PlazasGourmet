@@ -1,0 +1,176 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: black;
+    padding-top: 60px;
+    color: greenyellow;
+}
+
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar .logo img {
+    width: 80%;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    color: greenyellow;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+.dashboard-container {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: #000000;
+    height: 100vh;
+    color: white;
+}
+
+.header {
+    background-color: black;
+    color: greenyellow;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    width: 50px;
+}
+
+.form-group input {
+    width: 100%;
+    max-width: 550px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: greenyellow;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: rgb(103, 160, 19);
+    color: black;
+}
+
+.mesas-disponibles {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mesas-disponibles button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: black;
+    color: greenyellow;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.mesas-disponibles button:hover {
+    background-color: greenyellow;
+    color: black;
+}
+
+#mesas_disponibles {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    width: 60px;
+    text-align: center;
+    color: greenyellow;
+    font-weight: bold;
+}
+
+.logout-link {
+    text-decoration: none !important;
+    color: inherit !important;
+    cursor: pointer !important;
+}
+
+.logout-link:hover {
+    text-decoration: underline !important; /* Esto es opcional, para añadir subrayado al pasar el mouse */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+
+    .dashboard-container {
+        margin-left: 200px;
+    }
+
+    .form-group input {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .dashboard-container {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .form-group label, .form-group input {
+        width: 100%;
+    }
+
+    .form-group input {
+        max-width: 100%;
+    }
+}

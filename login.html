@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loguear Restaurante</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    
+    <div class="form-container">
+        <h2>Loguear Restaurante</h2>
+        <form action="./back/verificar_login.php" method="post">
+            <input type="hidden" name="id" value="<?php echo $restaurante['id']; ?>">
+
+            <div class="form-group">
+                <label for="correo">Correo</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            <div class="form-group">
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasenya" name="contrasenya" required>
+            </div>
+          
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Loguearse</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
