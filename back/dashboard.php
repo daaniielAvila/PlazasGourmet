@@ -62,6 +62,31 @@ include 'obtener_restaurante.php';
             </div>
         </form>
     </div>
+    <div class="reservas-container" style="display:none;">
+    <h2>Reservas del Restaurante</h2>
+    <table class="reservas-table">
+        <thead>
+            <tr>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th>Número de Personas</th>
+                <th>Código de Reserva</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($reservas as $reserva): ?>
+                <tr>
+                    <td><?php echo $reserva['fecha']; ?></td>
+                    <td><?php echo $reserva['hora']; ?></td>
+                    <td><?php echo $reserva['num_personas']; ?></td>
+                    <td><?php echo $reserva['codigo_reserva']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>
+
+
 </div>
 
 <script>
@@ -85,6 +110,19 @@ include 'obtener_restaurante.php';
         mesasDisponiblesInput.value = parseInt(mesasDisponiblesInput.value) + 1;
         mesasDisponiblesSpan.textContent = mesasDisponiblesInput.value;
     });
+    const reservasBtn = document.getElementById('reservasBtn');
+const contentDiv = document.querySelector('.content');
+const reservasContainer = document.querySelector('.reservas-container');
+
+reservasBtn.addEventListener('click', () => {
+    contentDiv.style.display = 'none';
+    reservasContainer.style.display = 'block';
+});
+infoBtn.addEventListener('click', () => {
+    contentDiv.style.display = 'block';
+    reservasContainer.style.display = 'none';
+});
+
 </script>
 
 </body>

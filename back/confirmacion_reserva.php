@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -71,6 +72,18 @@
     <div class="container">
         <h1>Confirmación de Reserva</h1>
         <?php
+        
+        function generarCodigoReserva($longitud = 8) {
+            $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+            $codigo_reserva = '';
+            for ($i = 0; $i < $longitud; $i++) {
+                $codigo_reserva .= $caracteres[rand(0, strlen($caracteres) - 1)];
+            }
+            return $codigo_reserva;
+        }
+        
+        $codigo_reserva = generarCodigoReserva(8);
+        
         $restaurante_id = $_GET['restaurante_id'];
         $restaurante_nombre = $_GET['restaurante_nombre'];
         $restaurante_ubicacion = $_GET['restaurante_ubicacion'];
@@ -78,24 +91,12 @@
         echo "<p><strong>Restaurante:</strong> $restaurante_nombre</p>";
         echo "<p><strong>Ubicación:</strong> $restaurante_ubicacion</p>";
 
-        function generarCodigoReserva() {
-            $longitud = 8;
-            $caracteres = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-            $codigo_reserva = '';
-
-            for ($i = 0; $i < $longitud; $i++) {
-                $codigo_reserva .= $caracteres[rand(0, strlen($caracteres) - 1)];
-            }
-
-            return $codigo_reserva;
-        }
-
-        $codigo_reserva = generarCodigoReserva();
-echo "Código de reserva generado: " . $codigo_reserva;
-
+        echo "Código de reserva generado: " . $codigo_reserva;
+        
         ?>
 
         <form action="procesar_reserva.php" method="post">
+            <input type="hidden" name="codigo_reserva" value="<?php echo $codigo_reserva; ?>">
             <input type="hidden" name="id_restaurante" value="<?php echo $restaurante_id; ?>">
             
             <label for="fecha">Fecha:</label>
@@ -106,7 +107,6 @@ echo "Código de reserva generado: " . $codigo_reserva;
             
             <label for="num_personas">Número de Personas:</label>
             <input type="number" id="num_personas" name="num_personas" min="1" required>
-            <input type="hidden" name="codigo_reserva" value="<?php echo $codigo_reserva; ?>">
 
             <button type="submit" name="reservar">Confirmar Reserva</button>
         </form>

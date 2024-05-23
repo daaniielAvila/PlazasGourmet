@@ -10,10 +10,7 @@
       <nav class="navbar">
         <div class="container">
             <h1 class="logo">PlazasGourmet</h1>
-            <ul class="nav-links">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Comprobar Reserva</a></li>
-            </ul>
+           
             <div class="nav-buttons">
               <a href="register.html">
                 <button class="animated-button">
@@ -53,8 +50,10 @@
             Tu navegador no soporta la reproducción de videos.
         </video>
         <div class="overlay"></div>
+
         <div class="content">
           <a href="register.html">
+
           <button class="animated-button">
             <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -82,7 +81,6 @@
                   <div class="projcard-description">¡La comida italiana es una delicia que ha conquistado el mundo con su exquisita variedad de sabores, ingredientes frescos y técnicas culinarias tradicionales! Desde la pasta hasta la pizza, y desde las antipasti hasta los postres, la cocina italiana ofrece una amplia gama de platos deliciosos y reconfortantes.
                   </div>
                   <div class="projcard-tagbox">
-                    <button><a href="">Aquí va el numero de restaurantes italianos </a></button>
                   </div>
                 </div>
               </div>
@@ -96,7 +94,6 @@
                   <div class="projcard-bar"></div>
                   <div class="projcard-description">La cocina china es una de las más ricas y variadas del mundo, con una historia que se remonta a miles de años. Se caracteriza por una amplia gama de sabores, técnicas de cocción distintivas y una increíble diversidad regional.</div>
                   <div class="projcard-tagbox">
-                    <button><a href="">Contact </a></button>
                   </div>
                 </div>
               </div>
@@ -110,7 +107,6 @@
                   <div class="projcard-bar"></div>
                   <div class="projcard-description">La cocina turca es una maravillosa fusión de influencias de Europa, Asia y Medio Oriente, lo que la convierte en una de las más variadas y deliciosas del mundo. Con una rica historia culinaria que se remonta a siglos atrás, la comida turca ofrece una amplia gama de sabores, ingredientes frescos y platos tradicionales.</div>
                   <div class="projcard-tagbox">
-                    <button><a href="">Contact </a></button>
                   </div>
                 </div>
               </div>
@@ -124,7 +120,6 @@
                   <div class="projcard-bar"></div>
                   <div class="projcard-description"> La cocina española es una delicia que refleja la rica historia y diversidad cultural del país. Con una amplia gama de sabores, ingredientes frescos y técnicas culinarias regionales, la comida española es apreciada en todo el mundo por su autenticidad y sabor.</div>
                   <div class="projcard-tagbox">
-                    <button><a href="">Contact </a></button>
                   </div>
                 </div>
               </div>
@@ -138,7 +133,6 @@
                   <div class="projcard-bar"></div>
                   <div class="projcard-description"> La comida variada es una amalgama deliciosamente diversa de sabores, ingredientes y técnicas culinarias de todo el mundo</div>
                   <div class="projcard-tagbox">
-                    <button><a href="">Contact </a></button>
                   </div>
                 </div>
               </div>

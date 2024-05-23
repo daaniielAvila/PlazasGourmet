@@ -10,10 +10,11 @@ $codigo_reserva = filter_var($_POST['codigo_reserva'], FILTER_SANITIZE_STRING);
 if (!$id_restaurante || !$fecha || !$hora || !$num_personas || !$codigo_reserva) {
     die("Todos los campos son obligatorios.");
 }
+var_dump($_POST['codigo_reserva']);
 
 $sql = "INSERT INTO reservas (id_restaurante, fecha, hora, num_personas, codigo_reserva) VALUES (?, ?, ?, ?, ?)";
 $stmt = $conn->prepare($sql);
-$stmt->bind_param("isssi", $id_restaurante, $fecha, $hora, $num_personas, $codigo_reserva);
+$stmt->bind_param("issss", $id_restaurante, $fecha, $hora, $num_personas, $codigo_reserva);
 
 if ($stmt->execute()) {
     echo "Reserva confirmada. Código de reserva: " . $codigo_reserva;

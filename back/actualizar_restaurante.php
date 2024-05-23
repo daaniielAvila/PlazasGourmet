@@ -1,7 +1,6 @@
 <?php
 include 'conexion.php'; 
 
-// Obtener y sanitizar datos del formulario
 $id = $_POST['id'] ?? null;
 $correo = filter_input(INPUT_POST, 'correo', FILTER_SANITIZE_EMAIL);
 $nombreRestaurante = filter_input(INPUT_POST, 'nombre', FILTER_SANITIZE_STRING);
@@ -16,8 +15,8 @@ if ($id !== null) {
     $stmt->bind_param("ssssiii", $correo, $nombreRestaurante, $direccion, $tipoCocina, $mesasTotales, $mesasDisponibles, $id);
 
     if ($stmt->execute()) {
-        echo "Datos actualizados con éxito";
-
+        header("Location: dashboard.php");
+        exit();
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
     }

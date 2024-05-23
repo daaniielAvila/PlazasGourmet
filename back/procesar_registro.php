@@ -1,7 +1,6 @@
 <?php
 include 'conexion.php'; 
 
-// Obtener y sanitizar datos del formulario
 $correo = filter_var($_POST['correo'], FILTER_SANITIZE_EMAIL);
 $contrasena = $_POST['contrasena'];
 $nombreRestaurante = filter_var($_POST['nombre-restaurante'], FILTER_SANITIZE_STRING);
