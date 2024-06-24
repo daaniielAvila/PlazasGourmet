@@ -91,7 +91,6 @@
         echo "<p><strong>Restaurante:</strong> $restaurante_nombre</p>";
         echo "<p><strong>Ubicación:</strong> $restaurante_ubicacion</p>";
 
-        echo "Código de reserva generado: " . $codigo_reserva;
         
         ?>
 

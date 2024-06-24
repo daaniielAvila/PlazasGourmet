@@ -195,3 +195,9 @@ body {
     background-color: #f5f5f5;
     color: #000000;
 }
+a{
+    color: rgb(255, 255, 255);
+}
+a:hover{
+    color: rgb(0, 0, 0);
+}

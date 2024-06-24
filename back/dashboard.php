@@ -17,6 +17,8 @@ include 'obtener_restaurante.php';
         <li id="infoBtn">Inicio</li>
         <li id="reservasBtn">Reservas</li>
         <li><a href="logout.php" id="logoutBtn" class="logout-link">Logout</a></li>
+        <li><a href="../index.php" class="button">Volver al inicio</a>
+</li>
     </ul>
 </div>
 

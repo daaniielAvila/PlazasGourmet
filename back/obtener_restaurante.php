@@ -5,7 +5,6 @@ include 'conexion.php';
 if (isset($_SESSION['user_id'])) {
     $id_restaurante = $_SESSION['user_id'];
     
-     Obtener información del restaurante
     $sql_restaurante = "SELECT id, correo, contrasenya, nombre, direccion, tipo_cocina, mesas_totales, mesas_disponibles FROM restaurante WHERE id = ?";
     $stmt_restaurante = $conn->prepare($sql_restaurante);
     $stmt_restaurante->bind_param("i", $id_restaurante);
